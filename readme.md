@@ -1,5 +1,5 @@
 # Sitecore.Support.139799.152589
-1) Sometimes empty closed tags become open in RTE field after saving. For example, </p> => <p>
+1) Sometimes empty closed tags become open in RTE field after saving. For example, &lt;/p&gt; =&gt; &lt;p&gt;
 2) Image with media path based URL is treated as broken link
 
 ## License  
