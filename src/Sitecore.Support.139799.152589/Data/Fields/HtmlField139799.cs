@@ -311,7 +311,7 @@
         if (!string.IsNullOrEmpty(attributeValue))
         {
           ID linkedItemID = this.GetLinkedItemID(attributeValue);
-          if ((!linkedItemID.IsNull) && (linkedItemID == itemLink.TargetItemID))
+          if (((object)linkedItemID != null) && (linkedItemID == itemLink.TargetItemID))
           {
             MediaUrlOptions shellOptions = MediaUrlOptions.GetShellOptions();
             string mediaUrl = MediaManager.GetMediaUrl(newLink, shellOptions);
@@ -344,7 +344,7 @@
         if (!string.IsNullOrEmpty(attributeValue))
         {
           ID linkedItemID = this.GetLinkedItemID(attributeValue);
-          if ((!linkedItemID.IsNull) && (linkedItemID == itemLink.TargetItemID))
+          if (((object)linkedItemID != null) && (linkedItemID == itemLink.TargetItemID))
           {
             string newHref = newLink.Paths.IsMediaItem ? MediaManager.GetMediaUrl(new MediaItem(newLink), MediaUrlOptions.GetShellOptions()) : LinkManager.GetDynamicUrl(newLink, LinkUrlOptions.Empty);
             node.SetAttributeValue("href", ReplaceUrlPath(attributeValue, newHref));
@@ -394,7 +394,7 @@
         if (!string.IsNullOrEmpty(attributeValue))
         {
           ID linkedItemID = this.GetLinkedItemID(attributeValue);
-          if ((!linkedItemID.IsNull) && (linkedItemID == itemLink.TargetItemID))
+          if (((object)linkedItemID != null) && (linkedItemID == itemLink.TargetItemID))
           {
             node.ParentNode.RemoveChild(node, true);
             flag = true;
@@ -420,7 +420,7 @@
         if (!string.IsNullOrEmpty(attributeValue))
         {
           ID linkedItemID = this.GetLinkedItemID(attributeValue);
-          if ((!linkedItemID.IsNull) && (linkedItemID == itemLink.TargetItemID))
+          if (((object)linkedItemID != null) && (linkedItemID == itemLink.TargetItemID))
           {
             node.ParentNode.RemoveChild(node, true);
             flag = true;
